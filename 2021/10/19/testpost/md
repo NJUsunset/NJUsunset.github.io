@@ -1,0 +1,58 @@
+---
+date: 2021/10/19
+categories:
+- test
+---
+
+# A Test Post
+
+This is a test post to verify whether basic functions of ***Markdown*** and ***hexo*** work properly.<!-- more -->
+
+> [Hexo docs](https://hexo.io/zh-cn/docs/ "hexo中文文档")
+>
+> [Markdown Introduction](https://markdown.com.cn/intro.html "Markdown简易教程")
+
+```cpp
+#include <iostream>
+
+int extern gcd(int a, int b)
+{
+    int r = 1, gcD = 0;
+    while (r > 0)
+    {
+        if (a > b)
+        {
+            r = a % b;
+            a = b;
+            b = r;
+        }
+        else
+        {
+            r = b % a;
+            b = a;
+            a = r;
+        }
+    }
+    gcD = r;
+
+    return gcD;
+}
+
+int main(void)
+{
+    int x, y, z, g1, GCD;
+    std::cout << "please input three intigers above 0." << std::endl;
+    std::cin >> x >> y >> z;
+    g1 = gcd(x, y);
+    GCD = gcd(g1, z);
+    std::cout << "gcd of x,y,z is " << GCD << std::endl;
+
+    return 0;
+}
+```
+
+{% blockquote MYSELF %}
+I said nothing but myself.
+{% endblockquote %}
+
+## end
