@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en,zh-CN,default">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/NJUsunset.github.io/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/NJUsunset.github.io/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/NJUsunset.github.io/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/NJUsunset.github.io/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/NJUsunset.github.io/css/main.css">
+
+
+<link rel="stylesheet" href="/NJUsunset.github.io/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"njusunset.github.io","root":"/NJUsunset.github.io/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="Hexo + GitHub to set up your personal blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo + GitHub in A Personal Blog">
+<meta property="og:url" content="https://njusunset.github.io/project/2021/Hexoplusgithub/">
+<meta property="og:site_name" content="WKFSPACE">
+<meta property="og:description" content="Hexo + GitHub to set up your personal blog">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://njusunset.github.io/NJUsunset.github.io/2021/Hexoplusgithub/hexogithub1.jpg">
+<meta property="og:image" content="https://njusunset.github.io/NJUsunset.github.io/2021/Hexoplusgithub/wkfspace1.jpg">
+<meta property="og:image" content="https://njusunset.github.io/NJUsunset.github.io/2021/Hexoplusgithub/hexo1.jpg">
+<meta property="og:image" content="https://njusunset.github.io/NJUsunset.github.io/2021/Hexoplusgithub/github1.jpg">
+<meta property="og:image" content="https://njusunset.github.io/NJUsunset.github.io/2021/Hexoplusgithub/hexo2.jpg">
+<meta property="og:image" content="https://njusunset.github.io/NJUsunset.github.io/2021/Hexoplusgithub/plugin1.jpeg">
+<meta property="article:published_time" content="2021-11-15T07:43:00.000Z">
+<meta property="article:modified_time" content="2021-11-15T07:43:51.000Z">
+<meta property="article:author" content="WKF">
+<meta property="article:tag" content="Tech">
+<meta property="article:tag" content="Coding">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://njusunset.github.io/NJUsunset.github.io/2021/Hexoplusgithub/hexogithub1.jpg">
+
+<link rel="canonical" href="https://njusunset.github.io/project/2021/Hexoplusgithub/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Hexo + GitHub in A Personal Blog | WKFSPACE</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/NJUsunset.github.io/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">WKFSPACE</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/NJUsunset.github.io/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/NJUsunset.github.io/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/NJUsunset.github.io/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://njusunset.github.io/project/2021/Hexoplusgithub/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/NJUsunset.github.io/images/avatar.gif">
+      <meta itemprop="name" content="WKF">
+      <meta itemprop="description" content="Welcome to my personal space">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WKFSPACE">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Hexo + GitHub in A Personal Blog
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-11-15 15:43:00 / Modified: 15:43:51" itemprop="dateCreated datePublished" datetime="2021-11-15T15:43:00+08:00">2021-11-15</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/NJUsunset.github.io/categories/SHARE/" itemprop="url" rel="index"><span itemprop="name">SHARE</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="Hexo-GitHub-to-set-up-your-personal-blog"><a href="#Hexo-GitHub-to-set-up-your-personal-blog" class="headerlink" title="Hexo + GitHub to set up your personal blog"></a>Hexo + GitHub to set up your personal blog</h1><img src="/NJUsunset.github.io/2021/Hexoplusgithub/hexogithub1.jpg" class>
+<span id="more"></span>
+<p>To be the same with most blogs set up on hexo, I would like to record main steps when I deal with my blog, and I hope this simple record could help you to some degree if you want to set up your own static blog on hexo.</p>
+<p>Before the record, I list some pages that could be helpful (And did help me when I start to establish this blog).</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/docs">Documentation|Hexo</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26625249">GitHub+Hexo搭建个人网站详细教程(知乎)</a></li>
+<li><a target="_blank" rel="noopener" href="https://theme-next.js.org/">NexT - Theme for Hexo</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next">next theme GitHub page(GitHub)</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.github.com/cn/pages">GitHub Pages docs(GitHub docs)</a></li>
+</ul>
+<p>OK, let’s start.</p>
+<h2 id="What-are-we-going-to-do"><a href="#What-are-we-going-to-do" class="headerlink" title="What are we going to do?"></a>What are we going to do?</h2><p>We will use hexo to generate a blog website and display it with github pages. Just like the one on which you read this post.</p>
+<img src="/NJUsunset.github.io/2021/Hexoplusgithub/wkfspace1.jpg" class>
+
+<h3 id="What-is-Hexo"><a href="#What-is-Hexo" class="headerlink" title="What is Hexo?"></a>What is Hexo?</h3><img src="/NJUsunset.github.io/2021/Hexoplusgithub/hexo1.jpg" class>
+
+<p>Hexo is a fast blog framework. You can write post in <em>Markdown</em> or other markup languages and Hexo generates static files constructing a static blog with beautiful themes.</p>
+<h3 id="What-is-GitHub-and-GitHub-Pages"><a href="#What-is-GitHub-and-GitHub-Pages" class="headerlink" title="What is GitHub and GitHub Pages?"></a>What is GitHub and GitHub Pages?</h3><img src="/NJUsunset.github.io/2021/Hexoplusgithub/github1.jpg" class>
+
+<p><del>The world largest HOMOSEXUAL DATING SITE.</del></p>
+<p>Ok, let’s be more serious. GitHub is the largest code hosting platform of the world. Over 65 million developers “shapes the future of software”, together. You can contribute to the open source community, manage your git repositories, review code like a pro, track bugs and features and power your CI/CD and DevOps workflow.</p>
+<p>The main service we are going to use is called GitHub Pages. It provides us a simple way of directly constructing public websites through your repositories on github.com. We can use GitHub Pages to showcase some open source projects, host a blog, or even share your resume. And here we will use it to publish our personal plog website produced by hexo.</p>
+<h2 id="Preparation-beforehand"><a href="#Preparation-beforehand" class="headerlink" title="Preparation beforehand"></a>Preparation beforehand</h2><h3 id="Local-side"><a href="#Local-side" class="headerlink" title="Local side"></a>Local side</h3><p>To use hexo on our computer (and push our posts to github), we need to install <a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn">Node.js</a> and <a target="_blank" rel="noopener" href="https://git-scm.com/downloads">Git</a> on our computer. Below I display one way each for Windows and Linux to install them. You can skip this part if you are familiar with them.</p>
+<h4 id="For-Windows-system"><a href="#For-Windows-system" class="headerlink" title="For Windows system"></a>For Windows system</h4><p>To install Node.js on windows system, just need to go to <a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/download/">the official website of Node.js</a> and download .msi package. (Currently <code>node-v16.13.0-x86.msi</code> as the newest) After download  finished, double click .msi file and follow the lead to install Node.js. </p>
+<p>Git installation is mostly same as what we do above. Visit <a target="_blank" rel="noopener" href="https://git-scm.com/download/win">git download page for windows</a> to download .exe package. And run it after download complete to install git</p>
+<p>After installation complete, press Win+R, input <code>cmd</code> and then press Enter to run CommandPrompt. Type <code>node -v</code>, <code>npm -v</code> and <code>git --version</code> and press Enter each to check. You would receive three build number if everything is right.</p>
+<h4 id="For-Linux-system"><a href="#For-Linux-system" class="headerlink" title="For Linux system"></a>For Linux system</h4><p>Git is included in package manager on most linux distribution. You can directly install with command like <code>sudo apt install git</code> or something alike. But you still have to download nodejs package for linux versions.<br>First, go to /usr/local/.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local</span><br></pre></td></tr></table></figure>
+<p>Then, use <code>wget</code> to download .tar.gz package to where you want to store it. You may need to install it first with <code>sudo apt install wget</code>.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo wget https://nodejs.org/dist/v16.13.0/node-v16.13.0.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p>Or mirror site for faster download speed.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo wget https://npm.taobao.org/mirrors/node/v16.11.1/node-v16.11.1-linux-arm64.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p>And use command <code>tar xzvf &lt;package-name&gt;</code> to decompress it. (add <code>sudo</code> before command if warned <code>Permission Denied</code>) </p>
+<p>Then create symbolic link.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -s /usr/local/&lt;node-folder-name&gt;/bin/node /usr/bin/node</span><br><span class="line">sudo ln -s /usr/local/&lt;node-folder-name&gt;/bin/npm /usr/bin/npm</span><br></pre></td></tr></table></figure>
+
+<p>Then input <code>node -v</code> to verify, you would get a build number if everything is fine.</p>
+<h3 id="Remote-side"><a href="#Remote-side" class="headerlink" title="Remote side"></a>Remote side</h3><p>The necessity in remote side is a github account. We just need functions of free account unless you don’t want to publicize your website code. And we can also apply(buy) a domain name so that we can visit our blog site through custom address. (e.g. You can visit my blog through <code>https://blog.wkfspace.xyz</code> other than <code>https://njusunset.github.io</code>)</p>
+<p>It would be a small piece of cake to register a github account. But we would have some trouble setting domain name. We need to add a record in type ‘<em>CNAME</em>‘ towards ‘<em><your-github-nickname>.github.io</your-github-nickname></em>‘. And later we will set in github to make it work.</p>
+<h2 id="Set-up-the-blog"><a href="#Set-up-the-blog" class="headerlink" title="Set up the blog"></a>Set up the blog</h2><p>Now we can start to set up our own blog.</p>
+<h3 id="Create-github-page-repository-and-connect"><a href="#Create-github-page-repository-and-connect" class="headerlink" title="Create github page repository and connect"></a>Create github page repository and connect</h3><p>On github website, click the “+” button and chose “New repository” and name it with <code>&lt;your-github-nickname&gt;.github.io</code>. Then create repository. We could find the setting option “github pages” in repository setting menu.</p>
+<p>Start git on our own devices and run codes below.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;&lt;your-github-nickname&gt;&quot;</span><br><span class="line">git config --global user.email &quot;&lt;your-github-email&gt;&quot;</span><br></pre></td></tr></table></figure>
+
+<p>Then open CMD (command prompt) window in Windows system (or shell window in Linux system). Input code below and press enter for several times until got a success notification.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;&lt;your-github-email&gt;&quot;</span><br></pre></td></tr></table></figure>
+
+<p>You may need to install <code>openssh-client</code> through package manage tools (say <code>apt</code> or <code>yum</code> command) on Linux system if you perform a minimum installation when installing system.</p>
+<p>Then go into <code>C:/User/&lt;username&gt;/.ssh/</code> for Windows and <code>~/.ssh/</code> for Linux and copy all content in <code>id_rsa.pub</code> (Can be opened with text editor). Then go to github website and find “SSH and GPG keys” option. Click “New SSH key” and paste what we’ve copied.</p>
+<p>You can verify connections in git bash <code>ssh -T git@github.com</code></p>
+<h3 id="Create-local-hexo-blog"><a href="#Create-local-hexo-blog" class="headerlink" title="Create local hexo blog"></a>Create local hexo blog</h3><p>Find a place to store blog on our local devices and create a folder. Then go into the folder and install hexo using <code>npm</code> command.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<p>You may need to add <code>sudo</code> prefix if encountering permission fail. </p>
+<p>Then go with code below.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npx hexo init   #initialise blog</span><br><span class="line">npm install     #install tools</span><br></pre></td></tr></table></figure>
+
+<p>after finished, using command <code>npx hexo g &amp;&amp; npx hexo s</code> to start a local server. You can find a blog page on <code>http://localhost:4000</code>. Mainly the same like this:</p>
+<img src="/NJUsunset.github.io/2021/Hexoplusgithub/hexo2.jpg" class>
+
+<p>Press Ctrl+C to stop the server.</p>
+<h3 id="Transfer-blog-to-github-pages"><a href="#Transfer-blog-to-github-pages" class="headerlink" title="Transfer blog to github pages"></a>Transfer blog to github pages</h3><p>After successfully run the blog on our devices, we need to  deploy it to github pages so that others can visit the blog through the internet. Here we’ll use a hexo plugin called <code>hexo-deployer-git</code> to fulfill it.</p>
+<p>As github has stopped support to login in with name and password from remote devices, we have to create a token (a kind of temporary password). Login to the github website and open setting page. Then find the “Developer settings” section, click in and then click “Personal access tokens”. Click “Generate new tokens”. In this case we only need permissions in “repo” part so click it on and choose a proper expiration time (To avoid further confusion in the future, I chose no expiration time. But mostly it wasn’t recommended for secure consideration). After finish setting (including a tag for the token) click generate and we will get a long serial,     click the copy button next to it and save it somewhere safe. <strong>Warning: You won’t see it after you leave that page.</strong> So if you forget it you can only regenerate a new one to replace.</p>
+<p>Then, install hexo-deployer-git in the blog folder on our devices.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>And then modify the “Deployment”  part in <code>_config.yml</code> file in blog folder like this:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo:</span><br><span class="line">    github:</span><br><span class="line">      url: https://github.com/&lt;your-github-nickname&gt;/&lt;your-github-nickname&gt;.github.io.git</span><br><span class="line">      branch: gh-pages</span><br><span class="line">      token: &lt;your-token&gt;</span><br><span class="line">  name: &lt;your-github-nickname&gt;</span><br><span class="line">  email: &lt;your-github-email&gt;</span><br></pre></td></tr></table></figure>
+
+<p>After finish this we can use command <code>npx hexo d</code> to upload our blog to github repository. Then we can go to https://<your-github-nickname>.github.io to visit our blog with any devices.</your-github-nickname></p>
+<p>If you have applied your personal domain name and you want to visit the blog through it or subdomain like <code>blog.wkfspace.xyz</code>. First, make sure you have add proper CNAME record on your domain manage page. The create a file named “CNAME” in “source” folder in the blog folder, and then open it with txt editor and wirte your domain name in it. Attention that the file has no extensions, not <code>CNAME.txt</code> or <code>CNAME.md</code>, just <code>CNAME</code>. You can fulfill it on windows by creating a <code>CNAME.txt</code> and deleting the extension <code>.txt</code> later. And the make a construct and push to github.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx hexo clean &amp;&amp; npx hexo g -d</span><br></pre></td></tr></table></figure>
+
+<p>Then github will do a check to connect to your domain, you can check the process in setting “pages” section. After success, your can visit your blog through your own domain name.</p>
+<h2 id="Usage-and-personalize"><a href="#Usage-and-personalize" class="headerlink" title="Usage and personalize"></a>Usage and personalize</h2><h3 id="Write-articles"><a href="#Write-articles" class="headerlink" title="Write articles"></a>Write articles</h3><p>In the blog folder, using command <code>npx hexo new &quot;&lt;post-title&gt;&quot;</code> to create a  <code>&lt;post-title&gt;.md</code> file in <code>&lt;blog-folder&gt;/source/_post/</code>. Then you can write your article by open it with txt editor that support <em>markdown</em>. After finish writing you can use command below to deploy your article.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npx hexo clean	# clean the cashe</span><br><span class="line">npx hexo generate	# generate pages</span><br><span class="line">npx hexo deploy	# push to github</span><br></pre></td></tr></table></figure>
+
+<p>or use <code>npx hexo clean &amp;&amp; npx hexo g -d</code> for short.</p>
+<p>You can refer to <a target="_blank" rel="noopener" href="https://hexo.io/docs">hexo website</a> and a simple <a target="_blank" rel="noopener" href="https://markdown.com.cn/"><em>Markdown</em> tutorial</a> page for what you need to beautify your article.</p>
+<h3 id="Personalize"><a href="#Personalize" class="headerlink" title="Personalize"></a>Personalize</h3><p>Most setting can be modified in <code>_config.yml</code> file. You can change themes, icons, classifications and many other aspects of your blog. Please refer to <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration">official documentation</a> for more info.</p>
+<p>Plus, you can visit <a target="_blank" rel="noopener" href="https://hexo.io/plugins/index.html">Plugins | Hexo</a> to find all kinds of plugins offering more functions for your blog.</p>
+<img src="/NJUsunset.github.io/2021/Hexoplusgithub/plugin1.jpeg" class>
+
+<p><strong>Thanks for reading.</strong></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/NJUsunset.github.io/tags/Tech/" rel="tag"><i class="fa fa-tag"></i> Tech</a>
+              <a href="/NJUsunset.github.io/tags/Coding/" rel="tag"><i class="fa fa-tag"></i> Coding</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/NJUsunset.github.io/2021/211027forward/" rel="prev" title="望断流星驿，心驰明月关">
+      <i class="fa fa-chevron-left"></i> 望断流星驿，心驰明月关
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo-GitHub-to-set-up-your-personal-blog"><span class="nav-number">1.</span> <span class="nav-text">Hexo + GitHub to set up your personal blog</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#What-are-we-going-to-do"><span class="nav-number">1.1.</span> <span class="nav-text">What are we going to do?</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#What-is-Hexo"><span class="nav-number">1.1.1.</span> <span class="nav-text">What is Hexo?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#What-is-GitHub-and-GitHub-Pages"><span class="nav-number">1.1.2.</span> <span class="nav-text">What is GitHub and GitHub Pages?</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Preparation-beforehand"><span class="nav-number">1.2.</span> <span class="nav-text">Preparation beforehand</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Local-side"><span class="nav-number">1.2.1.</span> <span class="nav-text">Local side</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#For-Windows-system"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">For Windows system</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#For-Linux-system"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">For Linux system</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Remote-side"><span class="nav-number">1.2.2.</span> <span class="nav-text">Remote side</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Set-up-the-blog"><span class="nav-number">1.3.</span> <span class="nav-text">Set up the blog</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-github-page-repository-and-connect"><span class="nav-number">1.3.1.</span> <span class="nav-text">Create github page repository and connect</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-local-hexo-blog"><span class="nav-number">1.3.2.</span> <span class="nav-text">Create local hexo blog</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Transfer-blog-to-github-pages"><span class="nav-number">1.3.3.</span> <span class="nav-text">Transfer blog to github pages</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Usage-and-personalize"><span class="nav-number">1.4.</span> <span class="nav-text">Usage and personalize</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Write-articles"><span class="nav-number">1.4.1.</span> <span class="nav-text">Write articles</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Personalize"><span class="nav-number">1.4.2.</span> <span class="nav-text">Personalize</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">WKF</p>
+  <div class="site-description" itemprop="description">Welcome to my personal space</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/NJUsunset.github.io/archives">
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/NJUsunset.github.io/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/NJUsunset.github.io/tags/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fas fa-cube"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">WKF</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/NJUsunset.github.io/lib/anime.min.js"></script>
+  <script src="/NJUsunset.github.io/lib/velocity/velocity.min.js"></script>
+  <script src="/NJUsunset.github.io/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/NJUsunset.github.io/js/utils.js"></script>
+
+<script src="/NJUsunset.github.io/js/motion.js"></script>
+
+
+<script src="/NJUsunset.github.io/js/schemes/muse.js"></script>
+
+
+<script src="/NJUsunset.github.io/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
